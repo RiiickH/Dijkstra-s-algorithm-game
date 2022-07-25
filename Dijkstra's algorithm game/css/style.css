@@ -4,6 +4,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+#body{
+    background-image: url("../images/background.png");
+}
+audio{
+    display: none;
+}
 #menu
 {
     position: fixed;
@@ -11,10 +17,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("/images/background.png");
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center;   
+    align-items: center;         
     overflow-y: auto;
 }
 #menu ul
@@ -28,11 +33,14 @@
     text-align: center;
     display: block;
 }
+.setting li a progress{
+    width:150px;
+}
 #menu ul li a
 {
     position: relative;
     text-decoration:none;
-    font-size: 3.5em;
+    font-size: 2.5em;
     padding: 0 10px;
     color: #fff;
     font-weight: 700;
@@ -57,4 +65,83 @@
     transform: translateY(-50%) scaleX(1);
     transform-origin: left;
     transition: 0.5s transform;
+}
+#menu .play{
+    display: none;
+}
+#menu .setting{
+    display: none;
+}
+#menu .help{
+    display: none;
+}
+#demo{
+    position: fixed;
+    top: 5%;
+    left: 10%;
+    display: none;
+    justify-content: center;   
+    align-items: center;         
+    border: 3px solid white;
+    width: 80%;
+    height: 90%;
+    border-radius:10px;
+}
+#demo>div{
+    width: 40%;
+    height: 100%;
+}
+#demo .left{
+    flex-direction: column;
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    border-right: 3px solid white;
+}
+#demo .left div{
+    width: 100%;
+    height: 30%;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+}
+#demo .left div:nth-child(3){
+    border-bottom: none;
+}
+#demo .left .ltop{
+    height: 40%;
+}
+#demo .right div{
+    height: 70%;
+}
+#demo .right .rtop a{
+    text-decoration: none;
+    font-size: 1.5em;
+    position: fixed;
+    right: 11%;
+    top: 6%;
+    color: white;
+}
+#demo .right .bottom{
+    flex-direction: column;
+    border-top: 1px solid white;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bottom div{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.bottom div a{
+    width: 45%;
+    text-decoration:none;
+    font-size: 1.5em;
+    color: #fff;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
 }

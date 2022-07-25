@@ -1,20 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dijkstra's algorithm game</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script>
+        var p=document.getElementById("pg")
+        function name(){
+            console.log(p.value)
+        }
+    </script>
 </head>
-<body>
+<body id="body">
      <div id="menu">
-        <img src="images\dijkstra.png" width="320" height="320">
-        <ul>
+         <audio id="back" controls loop preload="auto">
+             <source src="bgm.mp3" type="audio/mpeg">
+         </audio>
+        <img src="images/dijkstra.png" width="320" height="320" alt="">
+        <ul class="menu">
             <li><a href="#">Play</a></li>
             <li><a href="#">Setting</a></li>
             <li><a href="#">Help</a></li>
         </ul>
+         <ul class="play">
+             <li><a href="#">Demo mode</a></li>
+             <li><a href="#" onclick="g()">Challenge mode</a></li>
+             <li><a href="#">Custom mode</a></li>
+             <li><a href="#">Back</a></li>
+         </ul>
+         <ul class="setting">
+             <li><a href="#">Adjust music size</a></li>
+             <li><a href="#">close background music</a></li>
+             <li><a href="#">Back</a></li>
+         </ul>
+         <ul class="help">
+             <li><a href="#">background story</a></li>
+             <li><a href="#">Back</a></li>
+         </ul>
+     </div>
+     <div id="demo">
+         <div class="left">
+            <div class="ltop">
+
+            </div>
+             <div >
+
+             </div>
+             <div>
+
+             </div>
+         </div>
+         <div class="right">
+            <div class="rtop">
+                <a href="#">back</a>
+            </div>
+             <div class="bottom">
+                <div>
+                    <a href="#">Pause</a>
+                    <a href="#">Step back</a>
+                </div>
+                 <div>
+                     <a href="#">Speed up</a>
+                     <a href="#">Speed down</a>
+                 </div>
+             </div>
+         </div>
      </div>
 </body>
 </html>
